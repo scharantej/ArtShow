@@ -2,56 +2,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Art Gallery</title>
+<title>ASCII Art and Authors</title>
 <style>
 body {
 font-family: Arial, sans-serif;
 }
 
-.gallery {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 1rem;
+h1 {
+text-align: center;
 }
 
-.image-container {
-width: 200px;
-height: 200px;
-overflow: hidden;
+table {
+margin: 0 auto;
+border-collapse: collapse;
 }
 
-.image-container img {
-width: 100%;
-height: 100%;
-object-fit: contain;
-}
-
-.image-title {
-font-size: 1.2rem;
-font-weight: bold;
-}
-
-.image-artist {
-font-size: 1rem;
-font-weight: normal;
+th, td {
+border: 1px solid black;
+padding: 5px;
 }
 </style>
 </head>
 <body>
-<h1>Art Gallery</h1>
-<div class="gallery">
-{% for image in images %}
-<div class="image-container">
-<a href="/image/{{ image['id'] }}">
-<img src="{{ image['image_url'] }}" alt="{{ image['title'] }}">
-</a>
-<div class="image-title">{{ image['title'] }}</div>
-<div class="image-artist">{{ image['artist'] }}</div>
+<h1>ASCII Art and Authors</h1>
+
+<nav>
+<a href="/">Home</a>
+</nav>
+
+<div id="ascii-art">
+<!-- ASCII art will be displayed here -->
 </div>
-{% endfor %}
-</div>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Art</th>
+</tr>
+</thead>
+<tbody>
+<!-- Authors and their ASCII art will be displayed here -->
+</tbody>
+</table>
 </body>
 </html>
-
 
