@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ image['title'] }}</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+}
+
+.image-container {
+max-width: 500px;
+margin: auto;
+text-align: center;
+}
+
+.image-container img {
+max-width: 100%;
+height: auto;
+}
+
+.image-title {
+font-size: 2rem;
+font-weight: bold;
+margin-top: 1rem;
+}
+
+.image-artist {
+font-size: 1.5rem;
+font-weight: normal;
+margin-top: 0.5rem;
+}
+
+.image-description {
+font-size: 1.2rem;
+margin-top: 1rem;
+}
+</style>
+</head>
+<body>
+<div class="image-container">
+<img src="{{ image['image_url'] }}" alt="{{ image['title'] }}">
+<h2 class="image-title">{{ image['title'] }}</h2>
+<h3 class="image-artist">{{ image['artist'] }}</h3>
+<p class="image-description">{{ image['description'] }}</p>
+</div>
+</body>
+</html>
+
